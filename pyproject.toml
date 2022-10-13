@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "python-di"
+description = "Python dependency injection concept"
+version="1.0.0"
+authors = ["MK"]
+
+packages = [
+    { include = "core", from = "src" },
+    { include = "test-app", from ="src" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.6.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.setuptools.packages.find]
+where = ["src"]
